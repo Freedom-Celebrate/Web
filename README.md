@@ -1,2 +1,2 @@
 # Web
-wev development practices
+my first(begineer) web development practices
