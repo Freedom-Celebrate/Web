@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to GitHub · GitHub</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: #f6f8fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding-top: 40px;
+            color: #24292e;
+        }
+
+        .logo {
+            margin-bottom: 24px;
+            fill: #24292e;
+        }
+
+        .header-text {
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 15px;
+        }
+
+        .login-card {
+            background-color: #fff;
+            border: 1px solid #d8dee4;
+            border-radius: 6px;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 7px;
+            font-weight: 400;
+        }
+
+        .label-link {
+            float: right;
+            font-size: 12px;
+            color: #0969da;
+            text-decoration: none;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 5px 12px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #24292e;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #0969da;
+            box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.3);
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 5px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #2da44e;
+            border: 1px solid rgba(27, 31, 36, 0.15);
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .btn-primary:hover {
+            background-color: #2c974b;
+        }
+
+        .create-account {
+            border: 1px solid #d8dee4;
+            border-radius: 6px;
+            padding: 15px;
+            width: 310px;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .create-account a {
+            color: #0969da;
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: #6e7781;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <svg height="48" viewBox="0 0 16 16" width="48" class="logo">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+    </svg>
+
+    <div class="header-text">Sign in to GitHub</div>
+
+    <div class="login-card">
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="login_field">Username or email address</label>
+                <input type="text" id="login_field" name="login" required autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="password">
+                    Password
+                    <a href="#" class="label-link">Forgot password?</a>
+                </label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn-primary">Sign in</button>
+        </form>
+    </div>
+
+    <div class="create-account">
+        New to GitHub? <a href="#">Create an account</a>.
+    </div>
+
+    <footer>
+        <a href="#">Terms</a> 
+        <a href="#">Privacy</a>
+        <a href="#">Docs</a>
+        <a href="#">Contact GitHub</a>
+    </footer>
+
+    <script>
+        // JavaScript logic
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('login_field').value;
+            
+            // Logic for a real app would go here
+            console.log('Attempting login for:', username);
+            alert('This is a clone! Form submission blocked.');
+        });
+    </script>
+</body>
+</html>
